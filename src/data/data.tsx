@@ -1,40 +1,32 @@
 import {
-  AcademicCapIcon,
-  ArrowDownTrayIcon,
-  BuildingOffice2Icon,
+ // AcademicCapIcon,
+ // ArrowDownTrayIcon,
+ // BuildingOffice2Icon,
   CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
+  CommandLineIcon,
+ // FlagIcon,
+ // MapIcon,
+ // SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import GithubIcon from '../components/Icon/GithubIcon';
+import temporary from '../assets/gatekep/black.png'
+import jordanPFP from '../assets/githubjordan.jpg'
+//import foreground from '../assets/foregroundcheck.jpg'
+import buceesProject from '../assets/logos/buceesProject.png'
+import rishayPFP from '../assets/rishaygithub.png'
+/*import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import temporary from '../images/gatekep/black.png'
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
+import TwitterIcon from '../components/Icon/TwitterIcon';*/
 import {
   About,
   ContactSection,
-  ContactType,
+ // ContactType,
   Hero,
   HomepageMeta,
   PortfolioItem,
+  Programmers,
   SkillGroup,
   Social,
   TestimonialSection,
@@ -45,7 +37,7 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
+  title: '507A Homepage',
   description: "Example site built with Tim Baker's react resume template",
 };
 
@@ -54,13 +46,13 @@ export const homePageMeta: HomepageMeta = {
  */
 export const SectionId = {
   Hero: 'hero',
-  About: 'about',
+  About: 'Meet The Programmers',
   Contact: 'contact',
-  Portfolio: 'portfolio',
-  Resume: 'resume',
+  Portfolio: 'Documentations',
+  Resume: 'Resume',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
+  Testimonials: 'Tournaments',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -69,10 +61,10 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  * Hero section
  */
 export const heroData: Hero = {
-  imageSrc: temporary,
-  name: `???`,
+  name: `507A`,
   description: (
     <>
+      
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
@@ -111,6 +103,34 @@ export const aboutData: About = {
     // {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
+
+export const jordanData: Programmers = {
+  profileImageSrc: jordanPFP,
+  name: `Jordan Samaniego`, 
+  description: (
+    <p className="prose prose-sm text-gray-300 sm:prose-base">
+    Role: <strong className="font-bold text-gray-300">Backend Developer of Bucees Template, Auton Developer, <br /> Data Analyzer, Website Developer, Secondary Documentator </strong> <br />
+    </p>
+  ),
+  aboutItems: [
+    {label: 'Programming Languages', text: 'C++, Python, Typescript, HTML', Icon: CommandLineIcon},
+    {label: 'Years of Experience', text: '3', Icon: CalendarIcon},
+  ],
+}
+
+export const rishayData: Programmers = {
+  profileImageSrc: rishayPFP,
+  name: `Rishay Singh`, 
+  description: (
+    <p className="prose prose-sm text-gray-300 sm:prose-base">
+    Role: <strong className="font-bold text-gray-300">Frontend Developer of Bucees Template, Auton Developer, <br /> Website Developer, Main Documentaor</strong> <br />
+    </p>
+  ),
+  aboutItems: [
+    {label: 'Programming Languages', text: 'C++, Typescript, CSS, HTML', Icon: CommandLineIcon},
+    {label: 'Years of Experience', text: '1', Icon: CalendarIcon},
+  ],
+}
 
 /**
  * Skills section
@@ -191,70 +211,28 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
+    title: 'Bucees Project',
+    description: 'A direct link that leads to our source code. Fully documented with version histories.',
     url: 'https://reactresume.com',
-    image: porfolioImage1,
+    image: buceesProject,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
+    title: 'Bucees Updater',
+    description: 'A VS-Code extension that can manage all versions of our code and share it easily amongst our team.',
     url: 'https://reactresume.com',
-    image: porfolioImage2,
+    image: temporary,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
+    title: 'Season Documentation',
+    description: 'A quick rundown of how our season has gone as programmers. As well as any substantial changes we have added.',
     url: 'https://reactresume.com',
-    image: porfolioImage3,
+    image: temporary,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
+    title: 'Bucees Project Documentation',
+    description: 'An API documentation that teaches you how to use our code efficiently.',
     url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
+    image: temporary,
   },
 ];
 
@@ -308,18 +286,23 @@ export const testimonial: TestimonialSection = {
   imageSrc: temporary,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+      name: '16th Annual Chula Vista Tournament',
+      text: 'Lorem ipsum',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
+      name: 'Supernova Spectacular High School Tournament',
+      text: 'Lorem ipsum',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
+      name: 'South San Diego High Stakes Tournament',
+      text: 'Lorem ipsum',
+      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+    },
+    {
+      name: 'Chaminade Showdown V5RC High Stakes Tournament',
+      text: 'Lorem ipsum.',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
   ],
